@@ -4,6 +4,7 @@ import {Component, NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 @Component({
   //selector: 'my-app',
   templateUrl: './home.component.html',
+  styleUrls:  ['./home.component.scss']
 })
 
 @NgModule({

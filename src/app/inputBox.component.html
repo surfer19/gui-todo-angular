@@ -1,29 +1,29 @@
-<input #newTask
-       (keyup.enter)="addTask(newTask.value); newTask.value=''"
-       (blur)="addTask(newTask.value); newTask.value=''"
+<input #newTodo
+       (keyup.enter)="addTodo(newTodo.value); newTodo.value=''"
+       (blur)="addTodo(newTodo.value); newTodo.value=''"
         class="">
 
-<button (click)="addTask()"
+<button (click)="addTodo(newTodo.value)"
         class="btn btn-info"
 >add
 </button>
 
 <ul>
-  <li *ngFor="let todo of todos">
-    <button (click)="deleteTask(todo.id)"
-            class="btn btn-danger">
-      delete
-    </button>
+  <li *ngFor="let ohshit of todos">
+    <!--<button (click)="deleteTask(todo)"-->
+            <!--class="btn btn-danger">-->
+      <!--delete-->
+    <!--</button>-->
 
-    {{ todo.task_value }}
+    {{ ohshit.value }}
 
-    <input (click)="setTaskDone(todo)" class="check" type="checkbox" name="todo.done" title="check"/>
+    <!--<input (click)="setTaskDone(todo)" class="check" type="checkbox" name="todo.done" title="check"/>-->
   </li>
 </ul>
 
-<ul>
-  Done todos:
-  <li *ngFor="let doneTodo of doneTodos">
-      {{ doneTodo.task_value }}
-  </li>
-</ul>
+<!--<ul>-->
+  <!--Done todos:-->
+  <!--<li *ngFor="let doneTodo of doneTodos">-->
+      <!--{{ doneTodo.task_value }}-->
+  <!--</li>-->
+<!--</ul>-->

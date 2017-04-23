@@ -1,6 +1,8 @@
 import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { HttpModule } from '@angular/http';
+
 
 import { AppComponent } from './root.component';
 import { pageNotFound } from "./pageNotFound.component";
@@ -17,7 +19,8 @@ const appRoutes = [
 @NgModule({
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpModule
   ],
   declarations: [
     AppComponent,
